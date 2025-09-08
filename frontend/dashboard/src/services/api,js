@@ -1,0 +1,13 @@
+
+import axios from "axios";
+
+const API = axios.create({ baseURL: "http://localhost:5000/api" });
+
+// Tourist APIs
+export const getTourists = () => API.get("/tourists");
+export const getTouristById = (id) => API.get(`/tourists/${id}`);
+
+// Alerts APIs
+export const getAlerts = () => API.get("/alerts");
+
+export default API;
